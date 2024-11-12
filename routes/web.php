@@ -18,3 +18,5 @@ Route::get('/vista', function () {
 Route::get('/hola', function () {
     return 'Hola Mundo de Laravel';
 });
+Route::view( '/nav', 'navbar');
+Route::view('/hero','hero');
