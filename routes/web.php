@@ -20,3 +20,8 @@ Route::get('/hola', function () {
 });
 Route::view( '/nav', 'navbar');
 Route::view('/hero','hero');
+Route::get('/proveedores',function (){
+    $proveedores=\Illuminate\Support\Facades\DB::select('SELECT * FROM proveedores');
+
+    return view('proveedores',['proveedores'=>$proveedores]);
+});
